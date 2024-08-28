@@ -11,6 +11,8 @@ flavors = {
 
 ## Set a variable called choice to the flavor you want to search for.
 
+choice = input("Search for flavor:\n" )
+
 ## Use an if statement to check if choice is in the flavors dictionary.
 
 ## If it is, set another variable called cost to the value associated with choice.
@@ -19,9 +21,18 @@ flavors = {
 
 ## Print the cost.
 
+if choice in flavors:
+    cost = flavors[choice]
+else:
+    cost = 0
+print("The price of " + choice + " is " + str(cost) + ".")
+
 ### Search a Dictionary Part 2:
 
 ## Initialize two variables: highest_cost to 0 and fanciest to an empty string.
+
+highest_cost = 0
+fanciest = ''
 
 ## Loop through the flavors dictionary using a for loop.
 
@@ -30,3 +41,10 @@ flavors = {
 ## If it is, update fanciest to this flavor and highest_cost to its price.
 
 ## After the loop, print the most expensive flavor.
+
+for i in flavors:
+    if highest_cost < flavors[i]:
+      highest_cost = flavors[i]
+      fanciest = i
+print("The fanciest flavor is " + fanciest)
+    
