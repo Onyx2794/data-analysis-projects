@@ -79,7 +79,7 @@ def makediamond (height):
     diamond = ""
     halfdiamond = makeisosceles(height)
     diamond = halfdiamond + "\n"
-    for i in range(len(halfdiamond) -1, -1, -1):
+    for i in range(len(halfdiamond) -1, 0, -1):
         diamond = diamond + halfdiamond[i]
     return diamond
 print (makediamond(5))
